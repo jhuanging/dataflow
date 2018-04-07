@@ -1,0 +1,4 @@
+conf/used
+*.swp
+composer.lock
+vendor/**/.git
