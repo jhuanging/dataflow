@@ -9,14 +9,15 @@ class ComposerStaticInit2c0b03864a99325f108aba2297b37238
     public static $files = array (
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Stichoza\\GoogleTranslate\\' => 25,
         ),
         'R' => 
         array (
@@ -63,6 +64,10 @@ class ComposerStaticInit2c0b03864a99325f108aba2297b37238
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Stichoza\\GoogleTranslate\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stichoza/google-translate-php/src/Stichoza/GoogleTranslate',
         ),
         'Respect\\Validation\\' => 
         array (
@@ -144,6 +149,13 @@ class ComposerStaticInit2c0b03864a99325f108aba2297b37238
             'Upload' => 
             array (
                 0 => __DIR__ . '/..' . '/codeguy/upload/src',
+            ),
+        ),
+        'S' => 
+        array (
+            'Stichoza\\GoogleTranslate\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/stichoza/google-translate-php/src',
             ),
         ),
         'P' => 
@@ -1714,6 +1726,10 @@ class ComposerStaticInit2c0b03864a99325f108aba2297b37238
         'Respect\\Validation\\Rules\\Zend' => __DIR__ . '/..' . '/respect/validation/library/Rules/Zend.php',
         'Respect\\Validation\\Validatable' => __DIR__ . '/..' . '/respect/validation/library/Validatable.php',
         'Respect\\Validation\\Validator' => __DIR__ . '/..' . '/respect/validation/library/Validator.php',
+        'Stichoza\\GoogleTranslate\\Tokens\\GoogleTokenGenerator' => __DIR__ . '/..' . '/stichoza/google-translate-php/src/Stichoza/GoogleTranslate/Tokens/GoogleTokenGenerator.php',
+        'Stichoza\\GoogleTranslate\\Tokens\\SampleTokenGenerator' => __DIR__ . '/..' . '/stichoza/google-translate-php/src/Stichoza/GoogleTranslate/Tokens/SampleTokenGenerator.php',
+        'Stichoza\\GoogleTranslate\\Tokens\\TokenProviderInterface' => __DIR__ . '/..' . '/stichoza/google-translate-php/src/Stichoza/GoogleTranslate/Tokens/TokenProviderInterface.php',
+        'Stichoza\\GoogleTranslate\\TranslateClient' => __DIR__ . '/..' . '/stichoza/google-translate-php/src/Stichoza/GoogleTranslate/TranslateClient.php',
         'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
         'Upload\\Autoloader' => __DIR__ . '/..' . '/codeguy/upload/src/Upload/Autoloader.php',
         'Upload\\Exception\\UploadException' => __DIR__ . '/..' . '/codeguy/upload/src/Upload/Exception/UploadException.php',
