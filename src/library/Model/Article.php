@@ -7,12 +7,12 @@ use Libyaf\Logkit\Logger;
 
 class Article
 {
-    public function get($params)
+    public function get($params,  $tableName='article')
     {
         $database = Database::ins()
             ->createQueryBuilder()
             ->select('*')
-            ->from('article');
+            ->from($tableName);
 
         if (isset($params['id'])) {
             $database->andWhere('id=:id')->setParameter(':id', $params['id']);
@@ -25,7 +25,7 @@ class Article
         return $database->execute()->fetch();
     }
 
-    public function saveAll($data)
+    public function saveAll($data, $tableName='article')
     {
         $conn = Database::ins();
 
@@ -33,7 +33,7 @@ class Article
 
         try {
             foreach ($data as $item) {
-                $this->save($item);
+                $this->save($item, $tableName);
             }
 
             $conn->commit();
@@ -48,9 +48,9 @@ class Article
         return true;
     }
 
-    public function save($data)
+    public function save($data, $tableName='article')
     {
-        Database::ins()->insert('article', $data);
+        Database::ins()->insert($tableName, $data);
 
         return Database::ins()->lastInsertId();
     }

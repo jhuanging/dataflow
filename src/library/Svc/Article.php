@@ -5,7 +5,7 @@ use Model\Article as MA;
 
 class Article
 {
-    public function saveAll($job, $data)
+    public function saveAll($job, $data, $tableName='article')
     {
         if (! $data) {
             return false;
@@ -14,7 +14,7 @@ class Article
         $source = [];
 
         foreach ($data as $item) {
-            if ($this->existSource($item['taskid'])) {
+            if ($this->existSource($item['taskid'], $tableName)) {
                 continue;
             }
 
@@ -28,18 +28,19 @@ class Article
                 'source_id'     => $item['taskid'],
                 'source_time'   => date('Y-m-d H:i:s', $item['updatetime']),
             ];
+
         }
 
-        return (new MA)->saveAll($source);
+        return (new MA)->saveAll($source, $tableName);
     }
 
-    public function existSource($sourceId)
+    public function existSource($sourceId, $tableName='article')
     {
         $params = [
             'source_id' => $sourceId,
         ];
 
-        return (new MA)->get($params) ? true : false;
+        return (new MA)->get($params, $tableName) ? true : false;
     }
 
 }

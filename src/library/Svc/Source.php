@@ -1,6 +1,7 @@
 <?php
 namespace Svc;
 
+use Libyaf\Queue\Queue;
 use Model\Source as MS;
 
 class Source
@@ -27,6 +28,13 @@ class Source
                 $result = call_user_func($callback, $item['job'], $sourceResult);
 
                 if ($result) {
+                    //翻译队列
+                    foreach ($sourceResult as $sR) {
+                        $sR['job'] = $item['job'];
+                        $sR['task_id'] = $item['task_id'];
+                        $sR['lang'] = $item['lang'];
+                        Queue::ins()->push('translate_queue', json_encode($sR));
+                    }
                     $nearestResult = array_pop($sourceResult);
                     $this->saveNearestId($item['job'], $nearestResult['taskid']);
                 }
