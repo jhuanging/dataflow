@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8c5aa904d57f0d0a19ff947a4a15dafb",
+    "content-hash": "f9bae9f23fe83fedff4396f7c4e2841c",
     "packages": [
         {
             "name": "codeguy/upload",
@@ -1325,6 +1325,55 @@
                 "validator"
             ],
             "time": "2018-01-02T21:47:22+00:00"
+        },
+        {
+            "name": "stichoza/google-translate-php",
+            "version": "v3.2.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Stichoza/google-translate-php.git",
+                "reference": "60adf747a337912d15cb85e492ac804e8e0c294f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/Stichoza/google-translate-php/60adf747a337912d15cb85e492ac804e8e0c294f.zip",
+                "reference": "60adf747a337912d15cb85e492ac804e8e0c294f",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Stichoza\\GoogleTranslate\\": "src/"
+                },
+                "psr-4": {
+                    "Stichoza\\GoogleTranslate\\": "src/Stichoza/GoogleTranslate/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Levan Velijanashvili",
+                    "email": "me@stichoza.com"
+                }
+            ],
+            "description": "Free Google Translate API PHP Package",
+            "homepage": "http://github.com/Stichoza/google-translate-php",
+            "keywords": [
+                "google",
+                "php",
+                "translate"
+            ],
+            "time": "2017-05-05T11:45:11+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
