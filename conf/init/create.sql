@@ -49,6 +49,29 @@ CREATE TABLE `article_en` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `coin_market_cap`;
+CREATE TABLE `coin_market_cap` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `oid`    varchar(64) NOT NULL DEFAULT '',
+  `name`   varchar(64) NOT NULL DEFAULT '',
+  `symbol` varchar(64) NOT NULL DEFAULT '',
+  `rank`   varchar(64) NOT NULL DEFAULT '',
+  `price_usd` varchar(64) NOT NULL DEFAULT '',
+  `price_btc` varchar(64) NOT NULL DEFAULT '',
+  `24h_volume_usd` varchar(64) NOT NULL DEFAULT '',
+  `market_cap_usd` varchar(64) NOT NULL DEFAULT '',
+  `available_supply` varchar(64) NOT NULL DEFAULT '',
+  `total_supply` varchar(64) NOT NULL DEFAULT '',
+  `max_supply` varchar(64) NOT NULL DEFAULT '',
+  `percent_change_1h` varchar(64) NOT NULL DEFAULT '',
+  `percent_change_24h` varchar(64) NOT NULL DEFAULT '',
+  `percent_change_7d` varchar(64) NOT NULL DEFAULT '',
+  `last_updated` varchar(64) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 -- ----------------------------
 -- Table structure for spider
 -- ----------------------------
